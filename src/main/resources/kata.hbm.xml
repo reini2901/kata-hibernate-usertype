@@ -6,11 +6,21 @@
         
 <hibernate-mapping package="hibernate">
 
+	<typedef name="person" class="hibernate.type.PersonType"></typedef>
+
 	<class name="SimpleEntity" table="SIMPLE_ENTITY">
 		<id name="id" column="ID">
 			<generator class="native"></generator>
 		</id>
 		<property name="userName" column="user_name" type="java.lang.String"></property>
 	</class>
+	
+	<class name="BetterEntity" table="SIMPLE_ENTITY">
+		<id name="id" column="ID">
+			<generator class="native"></generator>
+		</id>
+		<property name="person" column="user_name" type="hibernate.type.PersonType" ></property>
+	</class>
+	
 
 </hibernate-mapping>        

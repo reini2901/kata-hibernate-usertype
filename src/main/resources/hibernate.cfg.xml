@@ -32,7 +32,8 @@
         <property name="hbm2ddl.auto">create-drop</property>
 
         <mapping resource="kata.hbm.xml"/>
-
+        
     </session-factory>
+
 
 </hibernate-configuration>
