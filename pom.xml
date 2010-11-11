@@ -36,5 +36,11 @@
   		<type>jar</type>
   		<scope>compile</scope>
   	</dependency>
+  	<dependency>
+  		<groupId>org.testng</groupId>
+  		<artifactId>testng</artifactId>
+  		<type>jar</type>
+  		<scope>test</scope>
+  	</dependency>
   </dependencies>
 </project>

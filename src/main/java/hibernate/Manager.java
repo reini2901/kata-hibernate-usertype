@@ -10,22 +10,9 @@ import org.hibernate.Session;
 
 public class Manager {
 
-	public static void main(String[] args) {
-		Manager mgr = new Manager();
+	
 
-		mgr.createAndStoreEvent("reini");
-
-		List<SimpleEntity> all = mgr.findAll();
-		for (SimpleEntity simpleEntity : all) {
-			System.out
-					.println(ToStringBuilder.reflectionToString(simpleEntity));
-		}
-
-		HibernateUtil.getSessionFactory().close();
-
-	}
-
-	private void createAndStoreEvent(String name) {
+	void createAndStoreEvent(String name) {
 		Session session = HibernateUtil.getSessionFactory().getCurrentSession();
 		session.beginTransaction();
 
