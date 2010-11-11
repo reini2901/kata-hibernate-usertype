@@ -36,7 +36,9 @@ public class PersonType implements org.hibernate.usertype.UserType {
 	@Override
 	public Object nullSafeGet(ResultSet rs, String[] names, Object owner)
 			throws HibernateException, SQLException {
-		return rs.getString(names[0]);
+		Person person = new Person();
+		person.setName(rs.getString(names[0]));
+		return person;
 	}
 
 	@Override
