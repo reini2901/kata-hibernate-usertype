@@ -1,4 +1,4 @@
-package hibernate;
+package at.co.rre.kanban.hibernate;
 
 public class Person {
 	

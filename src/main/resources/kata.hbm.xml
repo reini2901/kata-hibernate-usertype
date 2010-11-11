@@ -4,9 +4,10 @@
         "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
         
         
-<hibernate-mapping package="hibernate">
+        
+<hibernate-mapping package="at.co.rre.kanban.hibernate">
 
-	<typedef name="person" class="hibernate.type.PersonType"></typedef>
+	<typedef name="person" class="at.co.rre.kanban.hibernate.type.PersonType"></typedef>
 
 	<class name="SimpleEntity" table="SIMPLE_ENTITY">
 		<id name="id" column="ID">
@@ -19,7 +20,11 @@
 		<id name="id" column="ID">
 			<generator class="native"></generator>
 		</id>
-		<property name="person" column="user_name" type="hibernate.type.PersonType" ></property>
+		<property name="person" column="user_name" type="at.co.rre.kanban.hibernate.type.PersonType" ></property>
+		<!--
+			would also work (typedef)
+		<property name="person" column="user_name" type="p" ></property>
+		 -->
 	</class>
 	
 

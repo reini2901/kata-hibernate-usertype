@@ -1,4 +1,4 @@
-package hibernate.util;
+package at.co.rre.kanban.hibernate.util;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 

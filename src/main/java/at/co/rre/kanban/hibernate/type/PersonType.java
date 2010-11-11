@@ -1,6 +1,5 @@
-package hibernate.type;
+package at.co.rre.kanban.hibernate.type;
 
-import hibernate.Person;
 
 import java.io.Serializable;
 import java.sql.PreparedStatement;
@@ -9,13 +8,15 @@ import java.sql.SQLException;
 import java.sql.Types;
 
 import org.hibernate.HibernateException;
-import org.hibernate.type.StringType;
+import org.hibernate.usertype.UserType;
 
-public class PersonType implements org.hibernate.usertype.UserType {
+import at.co.rre.kanban.hibernate.Person;
+
+public class PersonType implements UserType {
 
 	@Override
 	public int[] sqlTypes() {
-		return new int [] {Types.VARCHAR};
+		return new int[] { Types.VARCHAR };
 	}
 
 	@Override
@@ -45,9 +46,9 @@ public class PersonType implements org.hibernate.usertype.UserType {
 	public void nullSafeSet(PreparedStatement st, Object value, int index)
 			throws HibernateException, SQLException {
 		Person p = (Person) value;
-		boolean hasName = p!= null && p.getName() != null;
-		if(hasName) {
-			st.setString(index, p.getName() );
+		boolean hasName = p != null && p.getName() != null;
+		if (hasName) {
+			st.setString(index, p.getName());
 		} else {
 			st.setNull(index, 0);
 		}

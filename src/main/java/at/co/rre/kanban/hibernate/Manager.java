@@ -1,12 +1,13 @@
-package hibernate;
+package at.co.rre.kanban.hibernate;
 
 import java.util.List;
 
-import hibernate.util.HibernateUtil;
 
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.hibernate.Query;
 import org.hibernate.Session;
+
+import at.co.rre.kanban.hibernate.util.HibernateUtil;
 
 public class Manager {
 

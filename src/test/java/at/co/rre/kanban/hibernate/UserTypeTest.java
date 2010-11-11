@@ -1,6 +1,5 @@
-package hibernate;
+package at.co.rre.kanban.hibernate;
 
-import hibernate.util.HibernateUtil;
 
 import java.util.List;
 
@@ -9,6 +8,11 @@ import org.apache.commons.lang.builder.ToStringBuilder;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
+
+import at.co.rre.kanban.hibernate.BetterEntity;
+import at.co.rre.kanban.hibernate.Manager;
+import at.co.rre.kanban.hibernate.SimpleEntity;
+import at.co.rre.kanban.hibernate.util.HibernateUtil;
 
 public class UserTypeTest  {
 
